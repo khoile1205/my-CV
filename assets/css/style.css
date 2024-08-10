@@ -10,12 +10,16 @@
 --------------------------------------------------------------*/
 
 :root {
-	--primary-color: #D2E0FB;
-	--secondary-color: #F9F3CC;
-	--tertiary-color: #D7E5CA;
-	--quaternary-color: #8EACCD;
+	--primary-color: #EEEDEB;
+	--secondary-color: #E6B9A6;
+	--tertiary-color: #939185;
+	--quaternary-color: #2F3645;
 
-	--primary-text-color: #808080;
+	--primary-text-color: #4C556B; /* Lighter primary text color */
+    --secondary-text-color: #4A4F63; /* Secondary text color */
+    --tertiary-text-color: #6A7185; /* Tertiary text color */
+
+	--white-color: #ffffff;
 }
 
 body {
@@ -100,7 +104,7 @@ h6 {
 #header h2 {
 	font-size: 24px;
 	margin-top: 20px;
-	color: rgba(255, 255, 255, 0.8);
+	color: var(--tertiary-text-color);
 }
 
 #header h2 span {
@@ -671,23 +675,24 @@ section .container {
 .resume .resume-item {
 	padding: 0 0 20px 20px;
 	margin-top: -2px;
-	border-left: 2px solid rgba(255, 255, 255, 0.2);
+	border-left: 2px solid var(--secondary-color);
 	position: relative;
 }
 
 .resume .resume-item h4 {
 	line-height: 18px;
-	font-size: 18px;
+	font-size: 20px;
 	font-weight: 600;
 	text-transform: uppercase;
 	font-family: 'Poppins', sans-serif;
-	color: var(--quaternary-color);
+	color: var(--tertiary-text-color);
 	margin-bottom: 10px;
 }
 
 .resume .resume-item h5 {
 	font-size: 16px;
-	background: rgba(255, 255, 255, 0.15);
+	color: var(--white-color);
+	background: var(--tertiary-color);
 	padding: 5px 15px;
 	display: inline-block;
 	font-weight: 600;
@@ -904,12 +909,12 @@ section .container {
 
 .portfolio .portfolio-wrap .portfolio-info h4 {
 	font-size: 20px;
-	color: var(--primary-text-color);
+	color: var(--white-color);
 	font-weight: 600;
 }
 
 .portfolio .portfolio-wrap .portfolio-info p {
-	color: var(--primary-text-color)fff;
+	color: var(--white-color);
 	font-size: 14px;
 	text-transform: uppercase;
 	padding: 0;
@@ -922,7 +927,7 @@ section .container {
 }
 
 .portfolio .portfolio-wrap .portfolio-links a {
-	color: var(--primary-text-color);
+	color: var(--white-color);
 	margin: 0 2px;
 	font-size: 28px;
 	display: inline-block;
@@ -1138,20 +1143,19 @@ section .container {
 .contact .php-email-form input:focus,
 .contact .php-email-form textarea:focus {
 	background-color: rgba(255, 255, 255, 0.11);
-	color: var(--secondary-color);
-
+	color: var(--white-color);
 }
 
 .contact .php-email-form input::-moz-placeholder,
 .contact .php-email-form textarea::-moz-placeholder {
 	color: var(--quaternary-color);
-	opacity: 1;
+	opacity: 0.9;
 }
 
 .contact .php-email-form input::placeholder,
 .contact .php-email-form textarea::placeholder {
 	color: var(--quaternary-color);
-	opacity: 1;
+	opacity: 0.5;
 }
 
 .contact .php-email-form input {
@@ -1172,7 +1176,8 @@ section .container {
 }
 
 .contact .php-email-form button[type='submit']:hover {
-	background: #15bb62;
+	background: var(--tertiary-color);
+	color: var(--white-color);
 }
 
 @keyframes animate-loading {
